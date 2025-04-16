@@ -1,0 +1,21 @@
+{
+  "name": "basic-node.js-app",
+  "version": "1.0.0",
+  "description": "basic node.js app with test script",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"running tests...\" && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/045-ayush/basic-node.js-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/045-ayush/basic-node.js-app/issues"
+  },
+  "homepage": "https://github.com/045-ayush/basic-node.js-app#readme"
+}
