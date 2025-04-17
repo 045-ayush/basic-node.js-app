@@ -1,0 +1,32 @@
+name: build and api call
+
+on:
+    push:
+        branches: [main]
+
+env:
+    CONFIG_MODE: "Fast"
+
+jobs:
+    build-and-call:
+        runs-on: ubuntu-latest
+        steps:
+            - name: checkout code
+              uses: actions/checkout@v3
+
+            - name: setup node.js environment
+              uses: actions/setup-node@v3
+              with:
+                node-version: '18'
+            
+            - name: install dependencies
+              run: npm install
+
+            - name: run tests
+              run: npm test
+
+            - name: call external api
+              run: |
+                echo "Mode: $CONFIG_MODE"
+                curl -H "Authorization: Bearer ${{ secrets.API_TOKEN }}" \
+                   -X GET https://example.com/data
